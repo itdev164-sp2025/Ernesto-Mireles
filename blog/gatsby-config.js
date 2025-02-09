@@ -9,14 +9,12 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Blog`,
-    description: ``,
-    author: `Ernesto Mireles`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: "My  Blog",
+    description: "A simple blog created for ITDEV-164",
+    author: "Ernesto Mireles",
     contact: {
-      name: `Ernesto Mireles`,
-      company: `Blogs Inc.`,
-      address: `PO Box 1234`,
+      name: "Ahmad",
+      email: "emireles@carthage.edu",
     },
   },
   plugins: [
@@ -37,11 +35,15 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#663399`,
-        // This will impact how browsers show your PWA/website
-        // https://css-tricks.com/meta-theme-color-and-trickery/
-        // theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `ASSADA5`,
+        accessToken: `FIRSTBLOG`,
       },
     },
   ],
